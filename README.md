@@ -1,24 +1,19 @@
-# README
+# [Honeybadger Take Home Project](https://honeybadger.notion.site/honeybadger/Take-home-project-for-Software-Developer-position-2023-fee9be3cd8454e1fb61e53f0172ff2e8)
+## How to run localy?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- `bin/setup` - install all dependencies 
+- `bin/rails credentials:show --environment=test` - show structure of required credentials
+- Run `bin/rails credentials:edit` to change your credentials according to structure from last step
+- `foremant start` - runs rails server and sidekiq
 
-Things you may want to cover:
+## How to deploy?
 
-* Ruby version
+- `bin/rails credentials:edit --environment=production` - to prepare production credentials
+- Update .env file 
+- Update config/deploy.yml with info about your docker registry, server ip, etc.
+- Run `mrsk deploy`
 
-* System dependencies
+## Notes, comments assumptions:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- To be honest, rails feels like overkill, but I was not confident enough that I could make it faster than 2 hours on something else and without quality neglection.
+- My assumption is that we don't really need to save in DB anything and just send slack message async is good enough.
