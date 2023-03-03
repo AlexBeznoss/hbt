@@ -5,6 +5,7 @@
 - `bin/rails credentials:show --environment=test` - show structure of required credentials
 - Run `bin/rails credentials:edit` to change your credentials according to structure from last step
 - `foremant start` - runs rails server and sidekiq
+- Make request to POST localhost:3000/webhooks
 
 ## How to deploy?
 
