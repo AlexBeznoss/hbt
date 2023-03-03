@@ -5,6 +5,8 @@ require "minitest/rails"
 require "webmock/minitest"
 require "sidekiq/testing"
 
+Sidekiq::Testing.fake!
+
 module SidekiqMinitestSupport
   def after_teardown
     Sidekiq::Worker.clear_all
@@ -13,6 +15,8 @@ module SidekiqMinitestSupport
 end
 
 class ActiveSupport::TestCase
+  include SidekiqMinitestSupport
+
   # Run tests in parallel with specified workers
   parallelize(workers: :number_of_processors)
 
