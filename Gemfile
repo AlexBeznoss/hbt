@@ -37,6 +37,7 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 gem "sidekiq"
 gem "slack-ruby-client", "~> 2.0"
+gem "honeybadger"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
