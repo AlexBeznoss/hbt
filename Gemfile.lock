@@ -66,17 +66,22 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
     concurrent-ruby (1.2.2)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     date (3.3.3)
     debug (1.7.1)
     erubi (1.12.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    hashdiff (1.0.1)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     json (2.6.3)
@@ -93,6 +98,9 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.17.0)
+    minitest-rails (7.0.0)
+      minitest (~> 5.10)
+      railties (~> 7.0.0)
     msgpack (1.6.0)
     net-imap (0.3.4)
       date
@@ -109,6 +117,7 @@ GEM
     parallel (1.22.1)
     parser (3.2.1.0)
       ast (~> 2.4.1)
+    public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.2)
@@ -175,6 +184,10 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
+    webmock (3.18.1)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -186,6 +199,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
+  minitest-rails
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
   rubocop-performance
@@ -193,6 +207,7 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   standard
   tzinfo-data
+  webmock
 
 RUBY VERSION
    ruby 3.2.1p31
